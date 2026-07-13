@@ -8,19 +8,13 @@ local window = require("settings.views.window")
 local animations = require("settings.views.animations")
 local curves = require("settings.views.curves")
 local misc = require("settings.views.misc")
----------------------
----- MY PROGRAMS ----
----------------------
+
 
 -- Set programs that you use
 local terminal    = "kitty"
 local fileManager = "dolphin"
 local menu        = "hyprlauncher"
 
-
--------------------
----- AUTOSTART ----
--------------------
 
 -- See https://wiki.hypr.land/Configuring/Basics/Autostart/
 
@@ -33,34 +27,6 @@ hl.on("hyprland.start", function ()
     hl.exec_cmd("waybar & hyprpaper")
     h1.exec_cmd("sway")
 end)
-
-
--------------------------------
----- ENVIRONMENT VARIABLES ----
--------------------------------
-
-
-
-
------------------------
------ PERMISSIONS -----
------------------------
-
--- See https://wiki.hypr.land/Configuring/Advanced-and-Cool/Permissions/
--- Please note permission changes here require a Hyprland restart and are not applied on-the-fly
--- for security reasons
-
--- hl.config({
---   ecosystem = {
---     enforce_permissions = true,
---   },
--- })
-
--- hl.permission("/usr/(bin|local/bin)/grim", "screencopy", "allow")
--- hl.permission("/usr/(lib|libexec|lib64)/xdg-desktop-portal-hyprland", "screencopy", "allow")
--- hl.permission("/usr/(bin|local/bin)/hyprpm", "plugin", "allow")
-
-
 
 
 ---------------------
