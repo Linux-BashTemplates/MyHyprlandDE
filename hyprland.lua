@@ -1,16 +1,17 @@
-local curves = require("settings.behavior.curves")
-local animations = require("settings.behavior.animations")
-local monitors = require("settings.hardware.monitors")
-local mouse = require("settings.hardware.mouse")
-local keyboard = require("settings.hardware.keyboard")
+curves = require("settings.behavior.curves")
+animations = require("settings.behavior.animations")
+command = require("utils.commands.command")
+monitors = require("settings.hardware.monitors")
+mouse = require("settings.hardware.mouse")
+keyboard = require("settings.hardware.keyboard")
 
-local layout = require("settings.views.layout")
-local workspaces = require("settings.views.workspaces")
-local window = require("settings.views.window")
-local misc = require("settings.views.misc")
-local bindings = require("bindings.generalKey") 
-local mediaBindings = require("bindings.media")
-local notificationBindings = require("bindings.notification")
+layout = require("settings.views.layout")
+workspaces = require("settings.views.workspaces")
+window = require("settings.views.window")
+misc = require("settings.views.misc")
+bindings = require("bindings.generalKey") 
+mediaBindings = require("bindings.media")
+notificationBindings = require("bindings.notification")
 
 -- See https://wiki.hypr.land/Configuring/Basics/Autostart/
 
@@ -18,11 +19,11 @@ local notificationBindings = require("bindings.notification")
 -- Or execute your favorite apps at launch like this:
 --
 hl.on("hyprland.start", function ()
-    hl.exec_cmd("waybar")
-    hl.exec_cmd("hyprpaper")
-    hl.exec_cmd("nm-applet")
-    hl.exec_cmd("sway")
-    hl.exec_cmd("kitty")
+   command.exec("waybar")
+   command.exec("hyprpaper")
+   command.exec("nm-applet")
+   command.exec("sway")
+   command.exec("kitty")
 end)
 
 
