@@ -25,7 +25,6 @@ function system.launchMenu()
   return command.exec("hyprlauncher")
 end
 
-
 function system.launchHyprshot()
   return command.exec(os.getenv("HOME") .. "/.local/bin/hyprshot")
 end
@@ -36,6 +35,10 @@ end
 
 function system.closeHyprlandSession()
   return command.exec("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'")
+end
+
+function system.reloadWaybar()
+ return command.exec("pkill -SIGUSR2 waybar")
 end
 
 return system
